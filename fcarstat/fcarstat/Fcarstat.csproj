@@ -4,12 +4,18 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <SignAssembly>False</SignAssembly>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.1.0-preview</Version>
+    <Version>0.1.1-preview</Version>
     <Company>Parker Reno Ciambrone</Company>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/parkerreno/fcarstat.net</PackageProjectUrl>
+    <PackageProjectUrl>https://fcarstat.net</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+    <Authors>ParkerReno</Authors>
+    <Product>Fcarstat.net</Product>
+    <PackageId>Fcarstat.net</PackageId>
+    <Description>A library for consuming the UDP "Data Out" from Forza Horizon 5. </Description>
+    <RepositoryUrl>https://github.com/parkerreno/fcarstat.net</RepositoryUrl>
+    <PackageTags>forza; forza horizon; forza horizon 5</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
