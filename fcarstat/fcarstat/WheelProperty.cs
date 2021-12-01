@@ -21,12 +21,24 @@
             this.RearRight = rearRight;
         }
 
+        /// <summary>
+        /// Data related to the front left wheel or tire.
+        /// </summary>
         public T FrontLeft { get; private set; }
 
+        /// <summary>
+        /// Data related to the front right wheel or tire. 
+        /// </summary>
         public T FrontRight { get; private set; }
 
+        /// <summary>
+        /// Data related to the rear left wheel or tire.
+        /// </summary>
         public T RearLeft { get; private set; }
 
+        /// <summary>
+        /// Data related to the rear right wheel or tire.
+        /// </summary>
         public T RearRight { get; private set; }
     }
 }

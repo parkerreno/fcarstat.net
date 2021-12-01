@@ -27,7 +27,7 @@
         public Vector3 Acceleration { get; set; } // src floats
 
         /// <summary>
-        /// Velocity data in meters per second?. 
+        /// Velocity data in meters per second.
         /// X = left/right, Y = up/down, Z = forwards/backwards
         /// </summary>
         public Vector3 Velocity { get; set; } // src: floats
@@ -69,22 +69,49 @@
 
         public WheelProperty<float> SurfaceRumble { get; set; }
 
+        /// <summary>
+        /// Tire slip angle (I believe this is in radians).
+        /// </summary>
         public WheelProperty<float> TireSlipAngle { get; set; }
 
         public WheelProperty<float> TireCombinedSlip { get; set; }
 
         public WheelProperty<float> SuspensionTravelMeters { get; set; }
 
+        /// <summary>
+        /// Information about the car currently being driven.
+        /// </summary>
         public CarData CarData { get; set; }
 
+        /// <summary>
+        /// Unknown property.  Unknown if being parsed to correct data type.  
+        /// If you know what this does, please open an issue and let me know - 
+        /// https://github.com/parkerreno/fcarstat.net/issues/new
+        /// </summary>
+        /// <remarks>You should not use this property as it may be changed/ removed in the future.</remarks>
         public int Unknown1 { get; set; }
 
+        /// <summary>
+        /// Unknown property.  Unknown if being parsed to correct data type.  
+        /// If you know what this does, please open an issue and let me know - 
+        /// https://github.com/parkerreno/fcarstat.net/issues/new
+        /// </summary>
+        /// <remarks>You should not use this property as it may be changed/ removed in the future.</remarks>
         public int Unknown2 { get; set; }
 
+        /// <summary>
+        /// Car's current position.
+        /// </summary>
         public Vector3 Position { get; set; }
 
+        /// <summary>
+        /// Speed in meters per second.
+        /// </summary>
         public float Speed { get; set; }
 
+        /// <summary>
+        /// Power in watts.
+        /// </summary>
         public float Power { get; set; }
 
         public float Torque { get; set; }

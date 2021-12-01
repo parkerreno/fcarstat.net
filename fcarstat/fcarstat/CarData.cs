@@ -5,6 +5,9 @@
     /// </summary>
     public class CarData
     {
+        /// <summary>
+        /// An enum representing car classes (D-X).
+        /// </summary>
         public enum CarClass
         {
             Unknown = -1,
@@ -18,6 +21,9 @@
             X = 7,
         };
 
+        /// <summary>
+        /// An enum representing drivetrain types.
+        /// </summary>
         public enum DrivetrainType
         {
             Unknown = -1,

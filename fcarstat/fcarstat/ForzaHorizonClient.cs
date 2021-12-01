@@ -17,6 +17,7 @@
         private UdpClient udpClient;
         private IPEndPoint ipEndpoint;
         private TelemetryPacket previousPacket;
+        private bool continueListening;
 
         public event EventHandler<TelemetryPacket> ReceivedTelemetryData;
 
@@ -34,12 +35,14 @@
                 endpoint = ipEndpoint,
             };
 
+            continueListening = true;
+
             udpClient.BeginReceive(new AsyncCallback(ReceiveCallback), state);
         }
 
         public void StopListening()
         {
-            udpClient.EndReceive(null, ref ipEndpoint);
+            continueListening = false;
         }
 
         private void ReceiveCallback(IAsyncResult ar)
@@ -48,13 +51,17 @@
             IPEndPoint endpoint = ((UdpState)(ar.AsyncState)).endpoint;
 
             byte[] receiveBytes = client.EndReceive(ar, ref endpoint);
+            
+            if (continueListening)
+            {
+                client.BeginReceive(new AsyncCallback(ReceiveCallback), ar.AsyncState);
+            }
+            
             TelemetryPacket packet = new TelemetryPacket(receiveBytes);
             PublishTelemetryData(packet);
 
             SecondaryEventProcessing(packet, previousPacket);
             previousPacket = packet;
-
-            client.BeginReceive(new AsyncCallback(ReceiveCallback), ar.AsyncState);
         }
 
         private void SecondaryEventProcessing(TelemetryPacket newPacket, TelemetryPacket previousPacket)
