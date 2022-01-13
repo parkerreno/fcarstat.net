@@ -8,8 +8,9 @@ After version 1.0.0, standard versioning practices will be followed with 0.0.x c
 Please use caution when upgrading to preview packages and to major versions.  
 
 ## Usage
-`ForzaHorizonClient` implements IDisposable, plan accordingly.
 
+### Basic Usage
+`ForzaHorizonClient` implements IDisposable, plan accordingly.
 ```C#
 public void Main()
 {
@@ -23,4 +24,11 @@ private void Client_ReceivedTelemetryData(object sender, Fcarstat.TelemetryPacke
 {
     // Process new data here 
 }
+```
+
+### Custom Port
+By default the client will use port 5005.  If you have a conflict, you can pass a custom port.
+```C#
+int port = 5006;
+ForzaHorizonClient client = new ForzaHorizonClient(port);
 ```
