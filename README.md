@@ -1,5 +1,5 @@
 # fcarstat.net
-fcarstat is a .NET Standard library designed to make it easier to consume telemetry data from Forza Horizon 5 (and possibly 4, currently untested). 
+fcarstat is a .NET Standard library designed to make it easier to consume telemetry data from Forza games, including Forza Horizon 5, Forza Horizon 4, and other Forza titles that support UDP telemetry output. 
 *Please note that while this is a .NET Standard library, it requires that the platform you use it on is compatible with the UDP Client.  Some platforms (e.g. Blazor WASM) will not work.*
 
 ## Versioning/ Changes
