@@ -13,9 +13,9 @@
     <Authors>ParkerReno</Authors>
     <Product>Fcarstat.net</Product>
     <PackageId>Fcarstat.net</PackageId>
-    <Description>A library for consuming the UDP "Data Out" from Forza Horizon 5. </Description>
+    <Description>A library for consuming the UDP "Data Out" from Forza games, including Forza Horizon 5, Forza Horizon 4, and other Forza titles. </Description>
     <RepositoryUrl>https://github.com/parkerreno/fcarstat.net</RepositoryUrl>
-    <PackageTags>forza; forza horizon; forza horizon 5</PackageTags>
+    <PackageTags>forza; forza horizon; forza horizon 5; forza horizon 4; forza motorsport; telemetry</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
